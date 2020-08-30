@@ -76,6 +76,20 @@ state which one.
 [gregorian]: https://en.wikipedia.org/wiki/Gregorian_calendar
 [utc]: https://en.wikipedia.org/wiki/Coordinated_Universal_Time
 
+There are many different definitions for week numbering. They depend on
+the day of the week that is considered to be the first and they all
+involve some ambiguity at the end of a year/beginning of the next 
+(when one week spans both years). In many implementations of `strftime`
+the codes `%W` and `%U` correspond to the [ISO][iso-week] and 
+[US Broadcast][us-week] standards respectively. Perhaps due to these
+ambiguities, only few projects use weeks in their version numbers. The
+definition in the above list is intentionally left ambiguous, as it
+would be tedious to determine which system is actually used by a given
+project.
+
+[iso-week]: https://en.wikipedia.org/wiki/ISO_week_date
+[us-week]: https://en.wikipedia.org/wiki/Broadcast_calendar
+
 # Case studies
 
 CalVer has quite a few users. These are projects selected for their
